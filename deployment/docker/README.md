@@ -118,3 +118,20 @@ Again, All the values should be exported as inline values. e.g.:
 export KAPUA_KEYSTORE=$(base64 /path/to/keystore.pkcs)
 export KAPUA_KEYSTORE_PASSWORD=keystore_password
 ```
+##### Mount external folder to as docker database data folder to prevent data loss after docker restart each time
+
+
+```bash
+chmod 777 /home/ubuntu/kapua/data
+```
+
+Change below *volumes* <LOCAL_PATH>:<CONTAINER_PATH>
+```bash
+  db:
+    image: liangfaan/kapua-sql:${IMAGE_VERSION}
+    ports:
+      - 8181:8181
+      - 3306:3306
+    volumes:
+      - /home/ubuntu/kapua/data:/var/opt/h2/data
+```
