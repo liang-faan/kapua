@@ -80,7 +80,7 @@
         <swagger-ui.version>3.23.0</swagger-ui.version>
 
         <logback.version>1.2.3</logback.version>
-        <snakeyaml.version>1.15</snakeyaml.version>
+        <snakeyaml.version>1.26</snakeyaml.version>
         <cucumber.version>1.2.4</cucumber.version>
         <spotify.version>8.15.1</spotify.version>
         <elasticsearch.version>5.3.0</elasticsearch.version>
